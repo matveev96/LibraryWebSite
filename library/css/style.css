@@ -49,6 +49,7 @@ body {
   margin: 0 auto;
 }
 
+/* Header styles start */
 .header {
   background-color: #0C0C0E;
 }
@@ -99,7 +100,37 @@ h1 {
   justify-content: flex-end;
 }
 
+/* Header styles end */
 
 
+/* Main styles start */
 
+/* Welcome styles start */
+.welcome {
+  display: flex;
+  height: 600px;
+  background: url(../img/Welcome.jpg) no-repeat center;
+  background-size: cover;
+  
+}
 
+.welcome_black {
+  margin-top: 220px;
+  height: 220px;
+  width: 600px;
+  background-color: #0C0C0E;
+}
+
+.welcome_p {
+  font-family: 'Forum';
+  font-style: normal;
+  font-weight: 400;
+  color: #FFFFFF;
+  font-size: 40px;
+  text-transform: uppercase;
+  margin: 35px 40px;
+  text-align: center;
+  letter-spacing: 3px;
+
+}
+/* Welcome styles end */

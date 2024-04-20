@@ -35,7 +35,7 @@ body {
   font-family: 'Inter';
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.2;
   color: black;
   
@@ -136,15 +136,96 @@ h1 {
 
 /* About styles start */
 
-.about {
+.about_title {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
 
 }
 
-.about_title {
+.about_h2 {
+  position: relative;
+
   font-family: 'Forum';
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 40px;
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+}
+
+.about_h2::after {
+  position: absolute;
+  display: block;
+  left: 50%;
+  transform: translateX(-50%);
+
+  top: 60px;
+
+  height: 1px;
+  width: 50px;
+
+  background-color: #0C0C0E;
+
+  content: "";
+}
+
+.about_p {
+  display: flex;
+  justify-content: center;
+  margin-top: 33px;
+  margin-bottom: 20px;
+}
+
+.about_images_slider {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 0;
+
+}
+
+.slide_none {
+  display: none;
+}
+
+.about_carousel {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+
+.dot_shadow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  height: 26px;
+  width: 26px;
+
+}
+
+.dot {
+  cursor: pointer;
+  height: 16px;
+  width: 16px;
+  background-color: #0C0C0E;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.dot_shadow:hover > .dot{
+  background-color: #BB945F;
+}
+
+.dot_shadow:active > .dot{
+  background-color: #BB945F;
 }
 /* About styles end */
 

@@ -257,15 +257,27 @@ h1 {
 
 .season label::before {
   content: "";
+
   display: inline-block;
   cursor: pointer;
   height: 17px;
   width: 17px;
-  background-color: transparent;
+  background: transparent;
   border: 1px black solid;
   border-radius: 50%;
-  
+  margin-right: 20px;
+}
+
+/* Checked */
+
+.season input[type="radio"]:checked + label::before {
+  background: url(../img/svg/Ellipse\ 0.svg) center no-repeat;
+}
+
+.season input[type="radio"]:checked + label {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
 }
 /*Favorites styles end */
-
 /* Main styles end */

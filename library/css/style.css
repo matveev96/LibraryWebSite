@@ -179,6 +179,8 @@ h1 {
   justify-content: center;
   margin-top: 33px;
   margin-bottom: 20px;
+  letter-spacing: 2px;
+  text-align: center;
 }
 
 .about_images_slider {
@@ -287,19 +289,19 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-
-  margin-top: 30px;
+  align-items: flex-start;
 }
 
-.first_book {
+.book_item {
   position: relative;
 
   box-sizing: border-box;
   width: 590px;
   height: 555px;
+  margin-top: 40px;
 }
 
-.first_book::before {
+.book_item::before {
   position: absolute;
 
   content: "";
@@ -366,6 +368,10 @@ h1 {
   height: 320px;
 }
 
+.text_transform_uppercase {
+  text-transform: uppercase;
+}
+
 .book_img {
   position: absolute;
   bottom: 0;
@@ -378,7 +384,7 @@ h1 {
   bottom: 15px;
   left: 20px;
   cursor: pointer;
-  
+
   font-family: 'Inter';
   font-style: normal;
   font-weight: 700;
@@ -391,7 +397,106 @@ h1 {
   width: 75px;
   height: 30px;
 }
-/* Favorites-items end */
 
+.book_button:hover {
+  background-color:#BB945F;
+  border: #BB945F;
+  transition-duration: 0.4s;
+}
+
+.spring_hidden {
+  display: none;
+}
+
+.summer_hidden {
+  display: none;
+}
+
+.autumn_hidden {
+  display: none;
+}
+/* Favorites-items end */
 /*Favorites styles end */
+
+/*Coffee shop styles start */
+
+.coffee_shop {
+  margin-top: 40px;
+}
+.coffee_and_tea {
+  width: 438px;
+}
+.menu_h3 {
+  font-family: 'Forum';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  letter-spacing: 2px;
+  color: #BB945F;
+  margin: 0;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.menu_h3_right {
+  text-align: right;
+}
+
+.menu_items_left {
+  display: flex;
+  flex-wrap: wrap;
+  width: 441px;
+}
+
+.menu_items_right {
+  display: flex;
+  flex-wrap: wrap;
+  width: 482px;
+}
+
+.menu_item {
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+  flex-grow: 1;
+}
+
+.item_name {
+  display: inline-block;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: 2px;
+  flex-grow: 1;
+  margin: 0;
+}
+
+.item_name_right {
+  text-align: right;
+}
+
+.brown_line {
+  display: inline-block;
+  width: 100px;
+  height: 1px;
+  background-color: #BB945F;
+  margin-right: 60px;
+  margin-left: 60px;
+}
+
+.item_cost {
+  display: inline-block;
+  font-family: 'Forum';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: 2px;
+  margin: 0;
+}
+/*Coffee shop styles end */
 /* Main styles end */

@@ -44,6 +44,10 @@ body {
   height: 100vh;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
 .wrapper {
   max-width: 1400px;
   margin: 0 auto;
@@ -92,7 +96,7 @@ body {
 .header_link:hover, .header_link:focus, .header_link:active {
   opacity: .75;
 }
-
+ 
 .header_right {
   display: flex;
   flex-wrap: wrap;
@@ -141,7 +145,6 @@ body {
   align-items: center;
   flex-direction: column;
   flex-wrap: wrap;
-
 }
 
 .h2 {
@@ -189,7 +192,17 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 0;
+}
 
+.about_slide {
+  overflow: hidden;
+}
+
+.about_img {
+  transition: .15s all;
+}
+.about_slide:hover .about_img {
+  transform: scale(1.05);
 }
 
 .slide_none {
@@ -257,7 +270,6 @@ body {
 
 .season label {
   cursor: pointer;
-
 }
 
 .season label::before {
@@ -381,11 +393,20 @@ body {
   height: 300px;
 }
 
+.favorites_img {
+  transition: .15s all;
+}
+.book_img:hover .favorites_img{
+  transform: scale(1.05);
+}
+
 .book_button {
   position: absolute;
   bottom: 15px;
   left: 20px;
   cursor: pointer;
+
+  background-color: white;
 
   font-family: 'Inter';
   font-style: normal;
@@ -611,11 +632,11 @@ body {
   letter-spacing: 1px;
 
   margin: 20px 0 20px 20px;
+  padding-left: 20px;
 }
 
 .input_form::placeholder {
   color: #8E8E8E ;
-  padding-left: 20px;
 }
 
 .form_find {
@@ -707,8 +728,10 @@ body {
   transition-duration: 0.4s;
 }
 /* Digital styles end*/
+/* Main styles end */
 
 /* Footer styles start */
+
 .footer {
   margin-top: 40px;
   background-color: #0C0C0E;
@@ -718,6 +741,8 @@ body {
 .frame_6 {
   display: flex;
   flex-direction: column;
+  border-bottom: 1px solid white;
+  padding-bottom: 30px;
 }
 .footer_frame {
   margin-top: 20px;
@@ -744,12 +769,6 @@ body {
 
 .footer_svg {
   margin-right: 10px;
-}
-
-.footer_line {
-  margin-top: 30px;
-  height: 1px;
-  background-color: #FFFFFF;
 }
 
 .footer_rss {
@@ -779,4 +798,3 @@ body {
   text-align: right;
 }
 /* Footer styles end */
-/* Main styles end */

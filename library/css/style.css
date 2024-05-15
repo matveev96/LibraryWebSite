@@ -55,6 +55,10 @@ img {
 
 /* Header styles start */
 .header {
+  /* position: fixed;
+  top: 0;
+  width: 1440px;
+  z-index: 999; */
   background-color: #0C0C0E;
 }
 
@@ -104,6 +108,10 @@ img {
   justify-content: flex-end;
 }
 
+.header_icon_profile:hover, .header_icon_profile:focus, .header_icon_profile:active {
+  opacity: .75;
+}
+
 /* Header styles end */
 
 
@@ -125,7 +133,7 @@ img {
   background-color: #0C0C0E;
 }
 
-.welcome_p {
+.welcome_title {
   font-family: 'Forum';
   font-style: normal;
   font-weight: 400;
@@ -147,7 +155,7 @@ img {
   flex-wrap: wrap;
 }
 
-.h2 {
+h2 {
   position: relative;
 
   font-family: 'Forum';
@@ -161,7 +169,7 @@ img {
 
 }
 
-.h2::after {
+h2::after {
   position: absolute;
   display: block;
   left: 50%;
@@ -262,6 +270,10 @@ img {
 
   width: 700px;
   margin-top: 40px;
+}
+
+.season {
+  flex-basis: 120px;
 }
 
 .season input[type=radio] {
@@ -658,6 +670,15 @@ img {
   background-color: #BB945F;
 }
 
+.form_inputs input[type='number'] {
+  -moz-appearance:textfield;
+}
+
+.form_inputs input::-webkit-outer-spin-button,
+.form_inputs input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
 .check_button {
   cursor: pointer;
 
@@ -743,12 +764,17 @@ img {
   flex-direction: column;
   border-bottom: 1px solid white;
   padding-bottom: 30px;
+  padding-bottom: 0;
 }
 .footer_frame {
   margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+.footer_frame_down {
+  margin: 10px 0 20px 0;
 }
 
 .footer_addres {
@@ -760,15 +786,31 @@ img {
   color: #FFFFFF;
 }
 
-.working_time {
+.footer_addres:hover{
+  opacity: .45;
+}
+
+.footer_working_time {
   text-align: right;
   font-size: 15px;
   line-height: 20px;
   margin: 0;
 }
 
+.footer_social_media_links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0;
+}
+
 .footer_svg {
   margin-right: 10px;
+  text-decoration: none;
+}
+
+.footer_svg:hover{
+  opacity: .45;
 }
 
 .footer_rss {
@@ -790,6 +832,10 @@ img {
   color: #FFFFFF;
 }
 
+.rss:hover{
+  opacity: .45;
+}
+
 .rss_username {
   display: block;
   text-decoration: none;
@@ -797,4 +843,9 @@ img {
   flex-basis: 400px;
   text-align: right;
 }
+
+.rss_username:hover{
+  opacity: .45;
+}
+
 /* Footer styles end */

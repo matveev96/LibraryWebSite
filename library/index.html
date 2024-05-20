@@ -39,13 +39,24 @@
                             <li class="header_item">
                                 <a href="#" class="header_link">Library Card</a>
                             </li>
+                               
+                            <div class="header_nav_close">
+                                <span class="header_nav_close_line"></span>
+                                <span class="header_nav_close_line"></span>
+                            </div>
                         </ul>
                     </nav>
-    
+
                     <div class="header_icon_profile">
                         <a href="#" class="header_icon_profile_link">
                             <img src="img/svg/icon_profile.svg" alt="icon_profile">
                         </a>
+                    </div>
+
+                    <div class="header_burger burger">
+                        <span class="burger_line burger_line_top"></span>
+                        <span class="burger_line burger_line_middle"></span>
+                        <span class="burger_line burger_line_bottom"></span>
                     </div>
                 </div>
             </div>
@@ -73,11 +84,11 @@
                         <img src="./img/about/image1.jpg" alt="slide1" class="about_img">
                     </div>
 
-                    <div class="about_slide">
+                    <div class="about_slide slide_none">
                         <img src="./img/about/image2.jpg" alt="slide2" class="about_img">
                     </div>
 
-                    <div class="about_slide">
+                    <div class="about_slide slide_none">
                         <img src="./img/about/image3.jpg" alt="slide3" class="about_img">
                     </div>
 
@@ -99,6 +110,12 @@
                     </div>
                     <div class="dot_shadow">
                         <span class="dot" onclick="currentSlide(3)"></span>
+                    </div>
+                    <div class="dot_shadow dot_shadow_none">
+                        <span class="dot" onclick="currentSlide(4)"></span>
+                    </div>
+                    <div class="dot_shadow dot_shadow_none">
+                        <span class="dot" onclick="currentSlide(5)"></span>
                     </div>
                 </div>
             </section>
@@ -615,6 +632,6 @@
 
         </div>
     </footer>
-    
+    <script src="js/main.js"></script>
 </body>
 </html>

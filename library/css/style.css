@@ -302,7 +302,7 @@ h2::after {
   flex-wrap: wrap;
   justify-content: space-between;
 
-  width: 700px;
+  max-width: 700px;
   margin-top: 40px;
 }
 
@@ -372,6 +372,21 @@ h2::after {
   border: 1px black solid;
 }
 
+.book_img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  height: 300px;
+}
+
+.favorites_img {
+  transition: .15s all;
+}
+.book_img:hover .favorites_img{
+  transform: scale(1.05);
+}
+
 .staff_picks {
   position: relative;
 
@@ -424,26 +439,12 @@ h2::after {
 
   margin-left: 20px;
   margin-top: 30px;
-  width: 355px;
+  max-width: 355px;
   height: 320px;
 }
 
 .text_transform_uppercase {
   text-transform: uppercase;
-}
-
-.book_img {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  height: 300px;
-}
-
-.favorites_img {
-  transition: .15s all;
-}
-.book_img:hover .favorites_img{
-  transform: scale(1.05);
 }
 
 .book_button {
@@ -492,9 +493,7 @@ h2::after {
 .coffee_shop {
   margin-top: 40px;
 }
-.coffee_and_tea {
-  width: 438px;
-}
+
 .menu_h3 {
   font-family: 'Forum';
   font-style: normal;
@@ -514,18 +513,6 @@ h2::after {
 
 .menu_h3_right {
   text-align: right;
-}
-
-.menu_items_left {
-  display: flex;
-  flex-wrap: wrap;
-  width: 441px;
-}
-
-.menu_items_right {
-  display: flex;
-  flex-wrap: wrap;
-  width: 482px;
 }
 
 .menu_item {
@@ -598,7 +585,7 @@ h2::after {
 }
 
 .map_info {
-  width: 696px;
+  max-width: 696px;
   height: 414px;
 }
 
@@ -735,6 +722,10 @@ h2::after {
   background-color:#BB945F;
   border: #BB945F;
   transition-duration: 0.4s;
+}
+
+.get_card {
+  max-width: 456px;
 }
 
 .h3_get_card {
@@ -887,20 +878,7 @@ h2::after {
 
 /* Media start*/
 
-@media screen and (max-width:1380px){
-  .slide_none {
-    display: none;
-  }
-
-  .about_slide {
-    margin: 0 auto;
-  }
-
-  .dot_shadow_none {
-    display: flex;
-  }
-
-}
+/* @media screen and (max-width:1380px){} */
 
 @media screen and (max-width:1024px){
 
@@ -972,6 +950,101 @@ h2::after {
     z-index: 11;
     margin-right: 40px;
   }
+
+  .about_slide {
+    position: relative;
+    padding: 0 82px;
+  }
+
+  .about_slide::before {
+    position: absolute;
+ 
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 24px;
+
+    background: url(../img/svg/About/arrow_left.svg) no-repeat center;
+
+    content: "";
+  }
+
+  .about_slide::after {
+    position: absolute;
+ 
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 24px;
+
+    background: url(../img/svg/About/arrow_right.svg) no-repeat center;
+
+    content: "";
+  }
+
+  .slide_none {
+    display: none;
+  }
+
+  .about_slide {
+    margin: 0 auto;
+  }
+
+  .dot_shadow_none {
+    display: flex;
+  }
+
+  .favorites_items {
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  .deserts {
+    margin-top: 40px;
+    margin-left: auto;
+  }
+
+  .map_info {
+    margin-top: 100px;
+  }
+
+  .find_card {
+    margin: 0 auto;
+  }
+
+  .get_card {
+   margin: 0 auto;
+  }
+
+  .h3_form_library {
+    text-align: center;
+  }
+
+  .get_card {
+    max-width: 600px;
+  }
+
+  .get_card_paragraph {
+    text-align: center;
+  }
+
+  .card_button {
+    margin-left: 0;
+  }
+
+  .card_button:last-child {
+    margin-left: 15px;
+  }
+
+  .get_card_buttons {
+    justify-content: center;
+  }
+
+  .rss_year, .rss_username {
+    flex-basis: auto;
+  }
+
 }
 
 /* Media end*/

@@ -51,7 +51,6 @@ img {
 .wrapper {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 15px;
 }
 
 /* Header styles start */
@@ -227,25 +226,38 @@ h2::after {
 }
 
 .about_images_slider {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-bottom: 0;
+  overflow: hidden;
+  max-width: 1400px;
+}
+.about_list_slides {
+  height: 560px;
+  width: 9999px;
+  margin: 0;
+  padding: 0;
+  transition: margin-left 500ms;
+
+  font-size: 0;
+}
+
+.about_button {
+  display: none;
 }
 
 .about_slide {
+  display: inline-block;
+  margin-right: 25px;
+  width: 450px;
+
   overflow: hidden;
 }
 
 .about_img {
+  display: block;
   transition: .15s all;
 }
+
 .about_slide:hover .about_img {
   transform: scale(1.05);
-}
-
-.slide_none:nth-child(1n + 4) {
-  display: none;
 }
 
 .about_carousel {
@@ -878,9 +890,9 @@ h2::after {
 
 /* Media start*/
 
-/* @media screen and (max-width:1380px){} */
+/* @media screen and (max-width:1024px){} */
 
-@media screen and (max-width:1024px){
+@media (max-width: 1024px){
 
   .header_burger{
     display: block;
@@ -951,43 +963,49 @@ h2::after {
     margin-right: 40px;
   }
 
-  .about_slide {
-    position: relative;
-    padding: 0 82px;
+  .about_images_slider {
+    overflow: hidden;
+    max-width: 614px;
   }
 
-  .about_slide::before {
+  .about_images_slider {
+    position: relative;
+    margin: 0 auto;
+  }
+
+  .about_button {
+    display: block;
+    width: 24px;
+    height: 24px;
+
+  }
+
+  .about_arrow_left {
     position: absolute;
  
     left: 0;
-    top: 0;
-    bottom: 0;
-    width: 24px;
+    top: 280px;
+    border: none;
+    padding: 0;
 
     background: url(../img/svg/About/arrow_left.svg) no-repeat center;
 
-    content: "";
   }
 
-  .about_slide::after {
+  .about_arrow_right {
     position: absolute;
  
     right: 0;
-    top: 0;
-    bottom: 0;
-    width: 24px;
+    top: 280px;
+    border: none;
+    padding: 0;
 
     background: url(../img/svg/About/arrow_right.svg) no-repeat center;
 
-    content: "";
-  }
-
-  .slide_none {
-    display: none;
   }
 
   .about_slide {
-    margin: 0 auto;
+    margin: 0 82px;
   }
 
   .dot_shadow_none {
@@ -998,7 +1016,6 @@ h2::after {
     flex-direction: column;
     align-items: center;
   }
-
 
   .deserts {
     margin-top: 40px;

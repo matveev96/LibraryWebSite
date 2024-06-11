@@ -110,8 +110,76 @@ img {
   justify-content: flex-end;
 }
 
+.header_profile_section {
+  position: relative;
+}
+
 .header_icon_profile:hover, .header_icon_profile:focus, .header_icon_profile:active {
   opacity: .75;
+}
+
+.header_icon_profile_hide {
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  z-index: 11;
+
+  display: none;
+}
+
+.header_drop_menu {
+  display: none;
+  position: absolute;
+  top: 28px;
+  right: 0px;
+  width: 80px;
+  height: 115px;
+  background-color: #FFFFFF;
+  text-align: center;
+
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.header_profile {
+  position: relative;
+  font-size: 15px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+}
+
+.header_profile::after {
+  position: absolute;
+  display: block;
+  left: 50%;
+  transform: translateX(-50%);
+
+  top: 24px;
+
+  height: 1px;
+  width: 48px;
+
+  background-color: #BB945F;
+
+  content: "";
+}
+
+.header_log_in_div, .header_my_profile_div {
+  margin-top: 20px;
+  font-size: 15px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+}
+
+.header_my_profile_div {
+  display: none;
+}
+
+.header_log_in, .header_register, .header_my_profile, .header_log_out {
+  cursor: pointer;
 }
 
 .header_burger {
@@ -357,11 +425,25 @@ h2::after {
 }
 
 /* Favorites-items start */
-.favorites_items {
+.winter_items, .spring_items, .summer_items, .autumn_items {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
+
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+
+  100% {
+      opacity: 1;
+  }
 }
 
 .book_item {
@@ -486,17 +568,10 @@ h2::after {
   transition-duration: 0.4s;
 }
 
-.spring_hidden {
+.season_hidden {
   display: none;
 }
 
-.summer_hidden {
-  display: none;
-}
-
-.autumn_hidden {
-  display: none;
-}
 /* Favorites-items end */
 /*Favorites styles end */
 
@@ -958,7 +1033,8 @@ h2::after {
     transform: translateY(-50%) rotate(-45deg);
   }
 
-  .header_icon_profile {
+
+  .header_profile_section {
     z-index: 11;
     margin-right: 40px;
   }
@@ -977,7 +1053,6 @@ h2::after {
     display: block;
     width: 24px;
     height: 24px;
-
   }
 
   .about_arrow_left {
@@ -1012,7 +1087,7 @@ h2::after {
     display: flex;
   }
 
-  .favorites_items {
+  .winter_items, .spring_items, .summer_items, .autumn_items {
     flex-direction: column;
     align-items: center;
   }

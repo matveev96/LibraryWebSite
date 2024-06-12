@@ -26,13 +26,18 @@
     hideIcon.style.display = 'block';
   });
 
-  document.addEventListener( 'click', (e) => {
-    const withinBoundaries = e.composedPath().includes(dropMenu);
-    if ( ! withinBoundaries ) {
-      dropMenu.style.display = 'none';  // скрываем элемент т к клик был за его пределами
-      hideIcon.style.display = 'none';
-    };
+  hideIcon.addEventListener('click', ()=> {
+    dropMenu.style.display = 'none';
+    hideIcon.style.display = 'none';
   });
+
+  // document.addEventListener( 'click', (e) => {
+  //   const withinBoundaries = e.composedPath().includes(dropMenu);
+  //   if ( ! withinBoundaries ) {
+  //     dropMenu.style.display = 'none';  // скрываем элемент т к клик был за его пределами
+  //     hideIcon.style.display = 'none';
+  //   };
+  // });
 }());
 
 

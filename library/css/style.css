@@ -55,12 +55,6 @@ img {
 
 /* Header styles start */
 .header {
-  /* Fixed Header styles */
-  /* position: fixed;
-  top: 0;
-  width: 1440px;
-  z-index: 999; */
-
   background-color: #0C0C0E;
 }
 
@@ -123,6 +117,7 @@ img {
   height: 28px;
   position: absolute;
   z-index: 11;
+  cursor: pointer;
 
   display: none;
 }

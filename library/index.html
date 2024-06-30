@@ -25,27 +25,58 @@
                     <nav class="header_nav">
                         <ul class="header_list">
                             <li class="header_item">
-                                <a href="#" class="header_link">About</a>
+                                <a href="#about" class="header_link js-scroll">About</a>
                             </li>
                             <li class="header_item">
-                                <a href="#" class="header_link">Favorites</a>
+                                <a href="#favorites" class="header_link js-scroll">Favorites</a>
                             </li>
                             <li class="header_item">
-                                <a href="#" class="header_link">Coffee shop</a>
+                                <a href="#coffee_shop" class="header_link js-scroll">Coffee shop</a>
                             </li>
                             <li class="header_item">
-                                <a href="#" class="header_link">Contacts</a>
+                                <a href="#contacts" class="header_link js-scroll">Contacts</a>
                             </li>
                             <li class="header_item">
-                                <a href="#" class="header_link">Library Card</a>
+                                <a href="#library_card" class="header_link js-scroll">Library Card</a>
                             </li>
+                               
+                            <div class="header_nav_close">
+                                <span class="header_nav_close_line"></span>
+                                <span class="header_nav_close_line"></span>
+                            </div>
                         </ul>
                     </nav>
+
+                    <div class="header_profile_section">
+
+                        <div class="header_icon_profile_hide"></div>
+
+                        <div class="header_icon_profile">
+                            <a href="#" class="header_icon_profile_link">
+                                <img src="img/svg/icon_profile.svg" alt="icon_profile">
+                            </a>
+                        </div>
     
-                    <div class="header_icon_profile">
-                        <a href="#" class="header_icon_profile_link">
-                            <img src="img/svg/icon_profile.svg" alt="icon_profile">
-                        </a>
+                        <div class="header_drop_menu">
+    
+                            <p class="header_profile">Profile</p>
+    
+                            <div class="header_log_in_div">
+                                <p class="header_log_in">Log In</p>
+                                <p class="header_register">Register</p>
+                            </div>
+    
+                            <div class="header_my_profile_div">
+                                <p class="header_my_profile">My Profile</p>
+                                <p class="header_log_out">Log Out</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="header_burger burger">
+                        <span class="burger_line burger_line_top"></span>
+                        <span class="burger_line burger_line_middle"></span>
+                        <span class="burger_line burger_line_bottom"></span>
                     </div>
                 </div>
             </div>
@@ -61,79 +92,92 @@
         </section>
 
         <div class="wrapper">
-            <section class="about">
+            <section class="about" id="about">
                 <div class="title">
                     <h2>About</h2>
                 </div>
 
                 <p class="paragraph_center">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside </p>
+                
 
                 <div class="about_images_slider">
-                    <div class="about_slide">
-                        <img src="./img/about/image1.jpg" alt="slide1" class="about_img">
+
+                    <button class="about_button about_arrow_left"></button>
+
+                    <ul class="about_list_slides">
+                        <li class="about_slide">
+                            <img src="./img/about/image1.jpg" alt="slide1" class="about_img">
+                        </li>
+                        <li class="about_slide">
+                            <img src="./img/about/image2.jpg" alt="slide2" class="about_img">
+                        </li>
+                        <li class="about_slide">
+                            <img src="./img/about/image3.jpg" alt="slide3" class="about_img">
+                        </li>
+                        <li class="about_slide">
+                            <img src="./img/about/image4.jpg" alt="slide4" class="about_img">
+                        </li>
+                        <li class="about_slide">
+                            <img src="./img/about/image5.jpg" alt="slide5" class="about_img">
+                        </li>
+                    </ul>
+
+                    <button class="about_button about_arrow_right"></button>
+
+                    <div class="about_carousel" style="text-align:center">
+                        <div class="dot_shadow dot_shadow1">
+                            <span class="dot dot1"></span>
+                        </div>
+                        <div class="dot_shadow dot_shadow2">
+                            <span class="dot dot2"></span>
+                        </div>
+                        <div class="dot_shadow dot_shadow3">
+                            <span class="dot dot3"></span>
+                        </div>
+                        <div class="dot_shadow dot_shadow4 dot_shadow_none">
+                            <span class="dot dot4"></span>
+                        </div>
+                        <div class="dot_shadow dot_shadow5 dot_shadow_none">
+                            <span class="dot dot5"></span>
+                        </div>
                     </div>
 
-                    <div class="about_slide">
-                        <img src="./img/about/image2.jpg" alt="slide2" class="about_img">
-                    </div>
-
-                    <div class="about_slide">
-                        <img src="./img/about/image3.jpg" alt="slide3" class="about_img">
-                    </div>
-
-                    <div class="about_slide slide_none">
-                        <img src="./img/about/image4.jpg" alt="slide4" class="about_img">
-                    </div>
-
-                    <div class="about_slide slide_none">
-                        <img src="./img/about/image5.jpg" alt="slide5" class="about_img">
-                    </div>
-                </div>
-
-                <div class="about_carousel" style="text-align:center">
-                    <div class="dot_shadow">
-                        <span class="dot" onclick="currentSlide(1)"></span>
-                    </div>
-                    <div class="dot_shadow">
-                        <span class="dot" onclick="currentSlide(2)"></span>
-                    </div>
-                    <div class="dot_shadow">
-                        <span class="dot" onclick="currentSlide(3)"></span>
-                    </div>
                 </div>
             </section>
         </div>
 
         <div class="wrapper">
-            <section class="favorites">
+            <section class="favorites" id="favorites">
                 <div class="title">
                     <h2 >Favorites</h2>
                 </div>
 
+                <p class="paragraph_bold">Pick favorites of season</p>
+
                 <form class="seasons_form">
-                    <p class="paragraph_bold">Pick favorites of season</p>
+                    
                     <div class="seasons_radiotypes">
-                        <div class="season">
-                            <input id="winter" type="radio"  name="season" value="1" checked>
-                            <label for="winter">Winter</label>
+                        <div id="winter_season" class="season">
+                            <input id="winter_input" type="radio"  name="season" value="1" checked>
+                            <label for="winter_input">Winter</label>
                         </div>
-                        <div class="season">
-                            <input id="spring" type="radio"  name="season" value="2">
-                            <label for="spring">Spring</label>
+                        <div id="spring_season" class="season">
+                            <input id="spring_input" type="radio"  name="season" value="2">
+                            <label for="spring_input">Spring</label>
                         </div>
-                        <div class="season">
-                            <input id="summer" type="radio"  name="season" value="3">
-                            <label for="summer">Summer</label>
+                        <div id="summer_season" class="season">
+                            <input id="summer_input" type="radio"  name="season" value="3">
+                            <label for="summer_input">Summer</label>
                         </div>
-                        <div class="season">
-                            <input id="autumn" type="radio"  name="season" value="4">
-                            <label for="autumn">Autumn</label>
+                        <div id="autumn_season" class="season">
+                            <input id="autumn_input" type="radio"  name="season" value="4">
+                            <label for="autumn_input">Autumn</label>
                         </div>
                     </div>
+                    
                 </form>
 
-                <div class="favorites_items">
-
+                <div id="winter_items" class="winter_items">
                     <div class="book_item">
 
                         <h3 class="staff_picks">Staff Picks</h3>
@@ -202,7 +246,11 @@
 
                     </div>
 
-                    <div class="book_item spring_hidden">
+                </div>
+
+                <div id="spring_items" class="spring_items season_hidden">
+
+                    <div class="book_item">
 
                         <h3 class="staff_picks">Staff Picks</h3>
                         <h3 class="book_name"><span class="text_transform_uppercase">The Body</span> <br> By Stephen King</h3>
@@ -219,7 +267,7 @@
 
                     </div>
 
-                    <div class="book_item spring_hidden">
+                    <div class="book_item">
 
                         <h3 class="staff_picks">Staff Picks</h3>
                         <h3 class="book_name"><span class="text_transform_uppercase">Carry: A Memoir of Survival on Stolen Land</span> <br> By Toni Jenson</h3>
@@ -236,7 +284,7 @@
 
                     </div>
 
-                    <div class="book_item spring_hidden">
+                    <div class="book_item">
 
                         <h3 class="staff_picks">Staff Picks</h3>
                         <h3 class="book_name"><span class="text_transform_uppercase">Days of Distraction</span> <br> By Alexandra Chang</h3>
@@ -253,7 +301,7 @@
 
                     </div>
 
-                    <div class="book_item spring_hidden">
+                    <div class="book_item">
 
                         <h3 class="staff_picks">Staff Picks</h3>
                         <h3 class="book_name"><span class="text_transform_uppercase">Dominicana</span> <br> By Angie Cruz</h3>
@@ -270,7 +318,11 @@
 
                     </div>
 
-                    <div class="book_item summer_hidden">
+                </div>
+                
+                <div id="summer_items" class="summer_items season_hidden">
+
+                    <div class="book_item">
 
                         <h3 class="staff_picks">Staff Picks</h3>
                         <h3 class="book_name"><span class="text_transform_uppercase">Crude: A Memoir</span> <br> By Pablo Fajardo & ​​Sophie Tardy-Joubert</h3>
@@ -287,7 +339,7 @@
 
                     </div>
 
-                    <div class="book_item summer_hidden">
+                    <div class="book_item">
 
                         <h3 class="staff_picks">Staff Picks</h3>
                         <h3 class="book_name"><span class="text_transform_uppercase">Let My People Go Surfing</span> <br> By Yvon Chouinard</h3>
@@ -304,7 +356,7 @@
 
                     </div>
 
-                    <div class="book_item summer_hidden">
+                    <div class="book_item">
 
                         <h3 class="staff_picks">Staff Picks</h3>
                         <h3 class="book_name"><span class="text_transform_uppercase">The Octopus Museum: Poems</span> <br> By Brenda Shaughnessy</h3>
@@ -321,7 +373,7 @@
 
                     </div>
 
-                    <div class="book_item summer_hidden">
+                    <div class="book_item">
 
                         <h3 class="staff_picks">Staff Picks</h3>
                         <h3 class="book_name"><span class="text_transform_uppercase">Shark Dialogues: A Novel</span> <br> By Kiana Davenport</h3>
@@ -338,7 +390,11 @@
 
                     </div>
 
-                    <div class="book_item autumn_hidden">
+                </div>
+
+                <div id="autumn_items" class="autumn_items season_hidden">
+
+                    <div class="book_item">
 
                         <h3 class="staff_picks">Staff Picks</h3>
                         <h3 class="book_name"><span class="text_transform_uppercase">Casual Conversation</span> <br> By Renia White</h3>
@@ -355,7 +411,7 @@
 
                     </div>
 
-                    <div class="book_item autumn_hidden">
+                    <div class="book_item">
 
                         <h3 class="staff_picks">Staff Picks</h3>
                         <h3 class="book_name"><span class="text_transform_uppercase">The Great Fire</span> <br> By Lou Ureneck</h3>
@@ -372,7 +428,7 @@
 
                     </div>
 
-                    <div class="book_item autumn_hidden">
+                    <div class="book_item">
 
                         <h3 class="staff_picks">Staff Picks</h3>
                         <h3 class="book_name"><span class="text_transform_uppercase">Rickey: The Life and Legend</span> <br> By Howard Bryant</h3>
@@ -389,7 +445,7 @@
 
                     </div>
 
-                    <div class="book_item autumn_hidden">
+                    <div class="book_item">
 
                         <h3 class="staff_picks">Staff Picks</h3>
                         <h3 class="book_name"><span class="text_transform_uppercase">Slug: And Other Stories</span> <br> By Megan Milks</h3>
@@ -411,7 +467,7 @@
         </div>
 
         <div class="wrapper">
-            <section class="coffee_shop">
+            <section class="coffee_shop" id="coffee_shop">
                 <div class="title">
                     <h2>Coffee Shop</h2>
                 </div>
@@ -503,11 +559,10 @@
                     </div>
                 </div>
             </section>
-        
         </div>
 
         <div class="wrapper">
-            <section class="contacts">
+            <section class="contacts" id="contacts">
                 <div class="title">
                     <h2>Our Contacts</h2>
                 </div>
@@ -537,7 +592,7 @@
         </div>
 
         <div class="wrapper">
-            <section class="digital_library_cards">
+            <section class="digital_library_cards" id="library_card">
                 <div class="title">
                     <h2>Digital Library Cards</h2>
                 </div>
@@ -560,7 +615,7 @@
 
                     <div class="get_card">
                         <h3 class="h3_form_library h3_get_card">Get a reader card</h3>
-                        <p class="get_card_paragraph">You will be able to see a reader card after <br> logging into account or you can register a new <br> account</p>
+                        <p class="get_card_paragraph">You will be able to see a reader card after logging into account or you can register a new account</p>
                         
                         <div class="get_card_buttons">
                             <button class="card_button" type="button" value="Sign">Sign Up</button>
@@ -615,6 +670,6 @@
 
         </div>
     </footer>
-    
+    <script src="js/main.js"></script>
 </body>
 </html>

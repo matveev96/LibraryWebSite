@@ -1,1 +1,1 @@
-# library_rs
+https://matveev96.github.io/library_rs/library

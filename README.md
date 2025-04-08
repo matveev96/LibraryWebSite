@@ -1,4 +1,4 @@
-# Library RS Project
+# Library Web-Site Project
 
 ## Github: matveev96
 **https://matveev96.github.io/LibraryWebSite/library/**
